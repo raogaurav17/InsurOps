@@ -8,7 +8,7 @@ load_dotenv()
 
 logger = get_logger("Data Injection to MongoDB")
 
-def load_data_to_mongo():
+def load_data_to_mongo() -> None:
     """
     Inject data into MongoDB Atlas
     :return:
