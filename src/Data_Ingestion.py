@@ -33,6 +33,7 @@ def ingest_data():
         logger.info(f"Converted {len(df)} records from MongoDB Atlas")
         logger.debug("Saving data as csv file")
         df.drop(columns=['_id'], inplace=True)  # Dropping MongoDB _id attribute from dataframe
+        os.makedirs(Config.DATA_DIR, exist_ok=True)
         df.to_csv(Config.RAW_DATA, index=False)
         logger.info(f"Saved {len(df)} records from MongoDB Atlas")
 

@@ -7,4 +7,15 @@ stages:
     outs:
       - data/raw_data.csv
 
+  data_split:
+    cmd: python -m src.Data_Splitting
+    deps:
+      - src/Config.py
+      - src/Data_Ingestion.py
+      - data/raw_data.csv
+
+    outs:
+      - data/training_data.csv
+      - data/testing_data.csv
+
 

@@ -11,6 +11,8 @@ class Config:
     # Data Dir and Files (Used in various Configs)
     DATA_DIR: str = os.getenv("DATA_DIR", "data")
     RAW_DATA: str = os.getenv("RAW_DATA", "data\\raw_data.csv")
+    TRAINING_DATA: str = os.getenv("TRAINING_DATA", "data\\training_data.csv")
+    TESTING_DATA: str = os.getenv("TESTING_DATA", "data\\testing_data.csv")
 
     # Mongo DB Atlas Configs
     MONGO_DATABASE: str = os.getenv("MONGO_DATABASE", "InsurOps-data")
